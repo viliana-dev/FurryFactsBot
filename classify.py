@@ -18,7 +18,7 @@ def classify(img):
     result = {labels[i]: float(probs[i]) for i in range(len(labels))}
 
     max_value = max(result.values())
-    if max_value > 0.25:
+    if max_value > 0.5:
         max_name = max(result, key=result.get)
     else:
         max_name = "I don't recognized it, please send me a cat or dog photo"
